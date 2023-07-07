@@ -1,0 +1,15 @@
+.filter-property{
+    background-color:hsl(180, 31%, 95%) ;
+    color: hsl(180, 29%, 50%);
+    border: transparent;
+    border-radius: .3em;
+    padding: .5em .7em;
+
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.filter-property:hover{
+    background-color: hsl(180, 29%, 50%);
+    color: white;
+}

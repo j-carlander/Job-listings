@@ -1,4 +1,5 @@
 import { FilterProperty } from "../FilterProperty/FilterProperty";
+import './FilterSection.css'
 
 export function FilterSection({role, level, languages, tools}){
     return (

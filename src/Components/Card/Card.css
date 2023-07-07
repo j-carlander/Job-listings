@@ -1,9 +1,12 @@
 .job-card{
     border-radius: .3em;
     border-left: .5em solid hsl(180, 29%, 50%);
-    margin-bottom: 5em;
     box-shadow: 3px 3px 20px hsl(180, 29%, 50%);
-
     padding: 2em;
-    width: fit-content;
+    position: relative;
+}
+
+.card-logo-container{
+    position: absolute;
+    top: -45px;
 }
