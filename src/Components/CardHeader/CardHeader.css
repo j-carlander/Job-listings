@@ -1,0 +1,21 @@
+.card-header{
+    display: flex;
+}
+
+.company-name{
+    color: hsl(180, 29%, 50%);
+    margin-right: 1em;
+}
+
+.newly-created,
+.featured{
+    background-color: hsl(180, 29%, 50%);
+    color: white;
+    padding: .3em .5em;
+    border-radius: 1000px;
+    margin-left: 1em;
+}
+
+.featured{
+    background-color: hsl(180, 14%, 20%);
+}

@@ -1,0 +1,17 @@
+
+
+.job-title{
+    margin: .2em auto;
+    color: hsl(180, 14%, 20%);
+}
+
+.job-details-list{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    color: hsl(180, 8%, 52%);
+}
+
+.job-details-list li:first-child{
+    list-style: none;
+}
