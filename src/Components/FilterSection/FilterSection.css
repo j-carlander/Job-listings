@@ -6,3 +6,11 @@
     border-top: 1px solid hsl(180, 8%, 52%);
     padding-top: 1em;
 }
+
+@media screen and (min-width: 1024px) {
+    .filter-section{
+        border-top: none;
+        justify-content: end;
+        margin-inline: auto 0;
+    }
+}

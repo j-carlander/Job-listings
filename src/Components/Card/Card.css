@@ -1,12 +1,30 @@
 .job-card{
+    width: 80%;
+    margin-inline: auto;
     border-radius: .3em;
-    border-left: .5em solid hsl(180, 29%, 50%);
     box-shadow: 3px 3px 20px hsl(180, 29%, 50%);
     padding: 2em;
     position: relative;
 }
 
+.card-left-border{
+    border-left: .5em solid hsl(180, 29%, 50%);
+}
+
 .card-logo-container{
     position: absolute;
     top: -45px;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .job-card{
+        position: static;
+        display: flex;
+        align-items: center;
+        gap: 2em;
+    }
+    .card-logo-container{
+        position: static;
+    }
 }

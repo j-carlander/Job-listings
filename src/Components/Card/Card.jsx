@@ -5,7 +5,7 @@ import './Card.css'
 
 export function Card(props){
     return (
-    <article className="job-card">
+    <article className={props.featured ? "job-card card-left-border":"job-card"}>
         <div className="card-logo-container">
             <img src={props.logo} alt="company logo" className="card-logo" />
         </div>
@@ -13,7 +13,7 @@ export function Card(props){
         <CardHeader company={props.company} featured={props.featured} newlyCreated={props.new} />
         <JobDescription position={props.position} postedAt={props.postedAt} contract={props.contract} location={props.location} />
         </div>
-        <FilterSection role={props.role} level={props.level} languages={props.languages} tools={props.tools} />
+        <FilterSection role={props.role} level={props.level} languages={props.languages} tools={props.tools} handleFilter={props.handleFilter} />
     </article>
     )
 }
