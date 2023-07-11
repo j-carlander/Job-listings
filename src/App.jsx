@@ -14,12 +14,13 @@ function App() {
   const [filteredJobs, setFilteredJobs] = useState([])
 
 useEffect(()=>{
+  setFilteredJobs(data)
 if(roleFilter.length > 0) setFilteredJobs(prev => prev.filter(job => roleFilter.includes(job.role)))
 if(levelFilter.length > 0) setFilteredJobs(prev => prev.filter(job => levelFilter.includes(job.level)))
 if(languageFilter.length > 0) setFilteredJobs(prev => prev.filter(job => job.languages.some(language => languageFilter.includes(language))))
 if(toolFilter.length > 0) setFilteredJobs(prev => prev.filter(job => job.tools.some(tool =>toolFilter.includes(tool))))
 
-if(roleFilter.length == 0 && levelFilter.length == 0 && languageFilter.length == 0 && toolFilter.length == 0) setFilteredJobs(data)
+// if(roleFilter.length == 0 && levelFilter.length == 0 && languageFilter.length == 0 && toolFilter.length == 0) setFilteredJobs(data)
 }, [roleFilter,levelFilter,languageFilter,toolFilter])
 
   return (
