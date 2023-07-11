@@ -4,7 +4,7 @@ import data from "../data.json";
 import { Card } from "./Components/Card/Card";
 import { ActiveFilters } from "./Components/ActiveFilters/ActiveFilters";
 import { useEffect, useState } from "react";
-
+import { Header } from "./Components/Header/Header";
 
 function App() {
   const [roleFilter, setRoleFilter] = useState([])
@@ -20,12 +20,13 @@ if(levelFilter.length > 0) setFilteredJobs(prev => prev.filter(job => levelFilte
 if(languageFilter.length > 0) setFilteredJobs(prev => prev.filter(job => job.languages.some(language => languageFilter.includes(language))))
 if(toolFilter.length > 0) setFilteredJobs(prev => prev.filter(job => job.tools.some(tool =>toolFilter.includes(tool))))
 
-// if(roleFilter.length == 0 && levelFilter.length == 0 && languageFilter.length == 0 && toolFilter.length == 0) setFilteredJobs(data)
 }, [roleFilter,levelFilter,languageFilter,toolFilter])
 
   return (
     <>
-      <ActiveFilters roles={roleFilter} levels={levelFilter} languages={languageFilter} tools={toolFilter} handleFilter={{setLanguageFilter, setLevelFilter, setRoleFilter, setToolFilter}} />
+      <Header >
+        <ActiveFilters roles={roleFilter} levels={levelFilter} languages={languageFilter} tools={toolFilter} handleFilter={{setLanguageFilter, setLevelFilter, setRoleFilter, setToolFilter}} />
+      </Header>
       {filteredJobs.map((job) => (
         <Card key={job.id} {...job} handleFilter={{setLanguageFilter, setLevelFilter, setRoleFilter, setToolFilter}} />
       ))}

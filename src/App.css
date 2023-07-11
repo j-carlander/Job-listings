@@ -1,7 +1,13 @@
 #root {
-  max-width: 1440px;
-  margin: 5em auto;
+  max-width: 375px;
+  margin: 0 auto;
   display: grid;
   align-items: baseline;
   gap: 5em;
+}
+
+@media screen and (min-width: 1024px){
+  #root{
+    max-width: 1440px;
+  }
 }

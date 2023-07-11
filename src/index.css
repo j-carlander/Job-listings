@@ -1,6 +1,8 @@
 :root {
   font-family: 'League Spartan', sans-serif;
-  /* line-height: 1.5; */
   font-weight: 500;
-
+}
+body{
+  margin: 0;
+  background-color: hsl(180, 52%, 96%) ;
 }
